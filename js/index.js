@@ -5,14 +5,16 @@ let prevScrollPos = window.pageYOffset;
 function usingMobile() {
     const mediaQuery = window.matchMedia('(max-width: 1000px)')
     return mediaQuery.matches;
-
 }
 
 function morphBurger() {
     let bars = document.querySelector('.burger__bars').children;
     bars[1].classList.toggle('decreaseWidth');
+    bars[0].classList.toggle('decreaseWidth');
+    bars[2].classList.toggle('decreaseWidth');
     bars[0].classList.toggle('rotateFirst');
     bars[2].classList.toggle('rotateThird');
+
 }
 
 function burgerHandler() {
@@ -22,16 +24,11 @@ function burgerHandler() {
 
 function initHidingHeader() {
     if (usingMobile()) {
-        console.log('mobile')
         header.classList.toggle('hidden')
-
-    }
-    else {
+    } else {
         window.onscroll = hideNavBarOnScroll;
     }
 }
-
-
 
 function hideNavBarOnScroll() {
     let currentScrollPos = window.pageYOffset;
