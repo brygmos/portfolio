@@ -27,6 +27,37 @@
   margin: 30px auto;
 }
 
+@media screen and (max-width: 1080px) {
+  .logo__container {
+    display: none;
+  }
+  nav {
+    flex-direction: column;
+    height: 100vh;
+  }
+  nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 110%;
+    font-size: 5vh;
+    color: darkorange;
+  }
+  header {
+    height: 100vh;
+  }
+  .burger {
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+}
+.contacts__title {
+  font-size: 2em;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -135,82 +166,18 @@ nav a:hover {
   background-color: darkorange;
 }
 
-.contacts {
+.skills {
   background-color: #161616;
-  height: 100vh;
 }
-
-@media screen and (max-width: 1080px) {
-  .logo__container {
-    display: none;
-  }
-  nav {
-    flex-direction: column;
-    height: 100vh;
-  }
-  nav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 110%;
-    font-size: 5vh;
-    color: darkorange;
-  }
-  header {
-    height: 100vh;
-  }
-  .burger {
-    z-index: 1000;
-    display: block;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-  }
+.skills__title {
+  color: darkorange;
+  text-align: center;
 }
-.contacts__title {
-  font-size: 2em;
-}
-
-@media (prefers-color-scheme: light) {
-  html, body {
-    color: white;
-  }
-  section {
-    padding: 5vw;
-  }
-  header {
-    background-color: #ffc1a0;
-    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.5);
-  }
-  .logo__container {
-    background-color: #fc935b;
-    border-radius: unset;
-  }
-  nav a {
-    color: white;
-  }
-  nav a:hover {
-    background-color: #f8ad86;
-  }
-  .portfolio {
-    background-color: #ffffff;
-  }
-  .portfolio__filter:hover {
-    opacity: 0.3;
-    transition: 0.3s ease-in-out;
-    box-shadow: 8px 8px 15px -3px rgb(0, 0, 0), -8px 8px 15px -3px rgb(0, 0, 0);
-  }
-  .portfolio__filter:not(:hover) {
-    opacity: 0;
-    transition: 0.1s ease-in;
-  }
-  .contacts {
-    background-color: #161616;
-    height: 100vh;
-  }
-  .card__btns {
-    background-color: #f8ad86;
-  }
+.skills__icons {
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=index.css.map */
