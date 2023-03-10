@@ -117,53 +117,52 @@ nav a:hover {
   text-decoration: none;
 }
 
-.portfolio {
+.projects {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: space-between;
   overflow: hidden;
   background-color: #404040;
 }
-.portfolio__filter {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-}
-.portfolio__filter:hover {
-  opacity: 0.3;
-  transition: 0.3s ease-in-out;
-  box-shadow: 8px 8px 15px -3px rgb(0, 0, 0), -8px 8px 15px -3px rgb(0, 0, 0);
-}
-.portfolio__filter:not(:hover) {
-  opacity: 0;
-  transition: 0.1s ease-in;
-}
-.portfolio__card {
+
+.card {
   margin: 50px;
-  position: relative;
   min-width: 500px;
-  flex: 1;
   height: 80vh;
   border-radius: 8px;
   overflow: hidden;
 }
-
-.card__img {
+.card__preview {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card__preview > img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
 }
+.card__filter {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.card__filter:hover {
+  opacity: 0.5;
+}
 .card__btns {
-  margin: auto;
+  width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
-  background-color: darkorange;
+  align-items: center;
 }
 
 .skills {
@@ -174,10 +173,44 @@ nav a:hover {
   text-align: center;
 }
 .skills__icons {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.skills__icons svg {
+  width: 100px;
+  margin: 30px;
+  transition: transform 0.1s ease-out;
+}
+.skills__icons svg:hover {
+  transform: scale(1.2);
+}
+.skills__icons img {
+  width: 30px;
+}
+
+.socials {
+  background-color: #fff;
+}
+.socials__title {
+  color: darkorange;
+  text-align: center;
+}
+.socials__icons {
   margin: 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.socials__icons svg {
+  fill: #161616;
+  width: 100px;
+  height: 100px;
+}
+.socials__icons svg:hover {
+  fill: darkorange;
 }
 
 /*# sourceMappingURL=index.css.map */
