@@ -27,37 +27,6 @@
   margin: 30px auto;
 }
 
-@media screen and (max-width: 1080px) {
-  .logo__container {
-    display: none;
-  }
-  nav {
-    flex-direction: column;
-    height: 100vh;
-  }
-  nav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 110%;
-    font-size: 5vh;
-    color: darkorange;
-  }
-  header {
-    height: 100vh;
-  }
-  .burger {
-    z-index: 1000;
-    display: block;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-  }
-}
-.contacts__title {
-  font-size: 2em;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -131,6 +100,7 @@ nav a:hover {
   height: 80vh;
   border-radius: 8px;
   overflow: hidden;
+  flex: 1;
 }
 .card__preview {
   width: 100%;
@@ -185,7 +155,7 @@ nav a:hover {
   transition: transform 0.1s ease-out;
 }
 .skills__icons svg:hover {
-  transform: scale(1.2);
+  transform: scale(1.08);
 }
 .skills__icons img {
   width: 30px;
@@ -201,16 +171,138 @@ nav a:hover {
 .socials__icons {
   margin: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
+.socials__icons a {
+  margin: 10px;
+  transition: transform 0.1s ease-out;
+}
+.socials__icons a:hover {
+  transform: scale(1.08);
+}
 .socials__icons svg {
-  fill: #161616;
   width: 100px;
   height: 100px;
 }
-.socials__icons svg:hover {
-  fill: darkorange;
+
+@media (min-width: 320px) and (max-width: 1199px) {
+  .logo__container {
+    display: none;
+  }
+  nav {
+    flex-direction: column;
+    height: 100vh;
+  }
+  nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 110%;
+    font-size: 5vh;
+  }
+  header {
+    height: 100vh;
+  }
+  .burger {
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  section {
+    padding: 0;
+  }
+  .card {
+    min-width: 500px;
+    height: 80vh;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1;
+  }
+  .card__preview {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card__preview > img {
+    width: 100%;
+    height: 100%;
+  }
+  .card__filter {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  .card__filter:hover {
+    opacity: 0.5;
+  }
+  .card__btns {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .skills {
+    padding-top: 5vh;
+  }
+  .skills__title {
+    font-size: 5vh;
+    color: darkorange;
+    text-align: center;
+  }
+  .skills__icons {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills__icons svg {
+    width: 30%;
+    margin: 30px;
+    transition: transform 0.1s ease-out;
+  }
+  .skills__icons svg:hover {
+    transform: scale(1.08);
+  }
+  .skills__icons img {
+    width: 30px;
+  }
+  .socials {
+    padding-top: 5vh;
+  }
+  .socials__title {
+    font-size: 5vh;
+    color: darkorange;
+    text-align: center;
+  }
+  .socials__icons {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .socials__icons a {
+    margin: 10px;
+    transition: transform 0.1s ease-out;
+  }
+  .socials__icons a:hover {
+    transform: scale(1.08);
+  }
+  .socials__icons svg {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

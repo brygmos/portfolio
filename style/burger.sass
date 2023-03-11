@@ -1,0 +1,21 @@
+.decreaseWidth
+  transform: scaleX(0)
+.rotateFirst
+  transform: rotate(45deg) translateY(30px) translateX(30px)
+  width: 120px
+
+.rotateThird
+  transform: rotate(-45deg) translateY(-30px) translateX(30px)
+  width: 120px
+
+.burger
+  display: none
+  padding: 30px
+  &__bar
+    transition: 0.3s ease-out
+    width: 120px
+    height: 15px
+    background-color: #fff
+    outline: 1px solid black
+    &:nth-child(2n)
+      margin: 30px auto

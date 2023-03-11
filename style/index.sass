@@ -11,6 +11,7 @@ html, body
 
 section
   padding: 5vw
+
 header
   z-index: 100
   position: fixed
@@ -49,81 +50,86 @@ nav
       background-color: #111
       text-decoration: none
 
-.portfolio
+.projects
   display: flex
-  flex-direction: row
+  justify-content: space-around
   flex-wrap: wrap
-  justify-content: space-between
   overflow: hidden
   background-color: #404040
-  &__filter
-    opacity: 0
-    width: 100%
-    height: 100%
-    &:hover
-      opacity: 0.3
-      transition: 0.3s ease-in-out
-      box-shadow: 8px 8px 15px -3px rgba(0,0,0,1), -8px 8px 15px -3px rgba(0,0,0,1)
-    &:not(:hover)
-      opacity: 0
-      transition: 0.1s ease-in
-  &__card
-    margin: 50px
-    position: relative
-    min-width: 500px
-    flex: 1
-    height: 80vh
-    border-radius: 8px
-    overflow: hidden
-    //&:hover
-    //  background-position-y: -300px
-    //  transition: 10s ease-in-out
-    //&:not(:hover)
-    //  background-position-y: 0
-    //  transition: 1s ease-in
 
 .card
-  &__img
-    position: absolute
-    top: 0
-    left: 0
+  margin: 50px
+  min-width: 500px
+  height: 80vh
+  border-radius: 8px
+  overflow: hidden
+  flex: 1
+  &__preview
     width: 100%
-    height: auto
+    height: 100%
+    position: relative
+    overflow: hidden
+    & > img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: auto
+  &__filter
+    width: 100%
+    height: 100%
+    background-color: #000
+    opacity: 0
+    transition: opacity 0.5s ease-out
+    &:hover
+      opacity: 0.5
   &__btns
-    margin: auto
+    width: 100%
     height: 100%
     display: flex
+    flex-wrap: wrap
     flex-direction: column
-    align-items: center
     justify-content: space-around
-    background-color: darkorange
+    align-items: center
 
-.contacts
+.skills
   background-color: #161616
-  height: 100vh
-
-@media screen and (max-width: 1080px)
-  .logo__container
-    display: none
-  nav
-    flex-direction: column
-    height: 100vh
-    & a
-      display: flex
-      justify-content: center
-      align-items: center
-      line-height: 110%
-      font-size: 5vh
-      color: darkorange
-  header
-    height: 100vh
-  .burger
-    z-index: 1000
-    display: block
-    position: fixed
-    left: 0
-    bottom: 0
-
-.contacts
   &__title
-    font-size: 2em
+    color: darkorange
+    text-align: center
+  &__icons
+    height: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    & svg
+      width: 100px
+      margin: 30px
+      transition: transform 0.1s ease-out
+      &:hover
+        transform: scale(1.08)
+    & img
+      width: 30px
+
+.socials
+  background-color: #fff
+  &__title
+    color: darkorange
+    text-align: center
+  &__icons
+    margin: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    & a
+      margin: 10px
+      transition: transform 0.1s ease-out
+      &:hover
+        transform: scale(1.08)
+    & svg
+      width: 100px
+      height: 100px
+
+@import "adaptive"
