@@ -1,15 +1,14 @@
+@import "cssVars.css";
 .decreaseWidth {
   transform: scaleX(0);
 }
 
 .rotateFirst {
-  transform: rotate(45deg) translateY(30px) translateX(30px);
-  width: 120px;
+  transform: translateY(5vw) rotate(45deg);
 }
 
 .rotateThird {
-  transform: rotate(-45deg) translateY(-30px) translateX(30px);
-  width: 120px;
+  transform: translateY(-5vw) rotate(-45deg);
 }
 
 .burger {
@@ -17,11 +16,11 @@
   padding: 5vw;
 }
 .burger__bar {
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-out;
   width: 15vw;
   height: 2vw;
   background-color: #fff;
-  outline: 1px solid black;
+  outline: 0.01vw solid grey;
 }
 .burger__bar:nth-child(2n) {
   margin: 3vw auto;
@@ -35,16 +34,22 @@
 html, body {
   font-family: sans-serif;
   box-sizing: border-box;
-  color: white;
 }
 
-section {
+.section {
   padding: 5vw;
 }
-section h1 {
+.section__title {
   font-size: 5vh;
-  color: darkorange;
+  margin: 5vh;
+  color: var(--sectionTitle);
   text-align: center;
+}
+.section__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 header {
@@ -56,9 +61,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #161616;
+  background-color: var(--headerBg);
   box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.5);
-  transition: top 0.3s ease;
+  transition: top 0.2s ease;
 }
 
 .hidden {
@@ -69,41 +74,34 @@ header {
   padding: 10px 20px;
   min-width: fit-content;
   text-align: center;
-  background-color: darkorange;
-  border-radius: 0 20px 20px 0;
+  background-color: var(--logoBg);
+  color: var(--logoText);
 }
 
-nav {
+.navigation {
   display: flex;
   flex: 2;
   justify-content: space-between;
   align-items: center;
 }
-nav a {
+.navigation a {
   width: 100%;
   line-height: 75px;
   flex: 1;
   text-align: center;
-  color: white;
+  color: var(--headerText);
 }
-nav a:hover {
-  background-color: #111;
+.navigation a:hover {
+  background-color: var(--headerBgHover);
   text-decoration: none;
 }
 
 .projects {
-  background-color: #404040;
+  background-color: var(--sectionBg);
 }
-.projects__container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-
 .card {
   margin: 50px;
-  min-width: 500px;
+  min-width: 400px;
   height: 80vh;
   border-radius: 8px;
   overflow: hidden;
@@ -125,7 +123,7 @@ nav a:hover {
 .card__filter {
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: var(--black);
   opacity: 0;
   transition: opacity 0.5s ease-out;
 }
@@ -143,18 +141,7 @@ nav a:hover {
 }
 
 .skills {
-  background-color: #161616;
-}
-.skills__title {
-  color: darkorange;
-  text-align: center;
-}
-.skills__icons {
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--sectionBgSecond);
 }
 .skills__icons svg {
   width: 100px;
@@ -169,18 +156,7 @@ nav a:hover {
 }
 
 .socials {
-  background-color: #fff;
-}
-.socials__title {
-  color: darkorange;
-  text-align: center;
-}
-.socials__icons {
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  background-color: var(--sectionBg);
 }
 .socials__icons a {
   margin: 10px;
@@ -194,23 +170,27 @@ nav a:hover {
   height: 100px;
 }
 
-@media (min-width: 320px) and (max-width: 1199px) {
+#github {
+  fill: var(--sectionTitle);
+}
+
+@media (max-width: 1000px) {
   .logo__container {
     display: none;
   }
-  nav {
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .navigation {
     flex-direction: column;
-    height: 100vh;
+    justify-content: space-between;
   }
-  nav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 110%;
+  .navigation a {
     font-size: 5vh;
+    margin: 1vh;
   }
   header {
     height: 100vh;
+    align-items: flex-end;
   }
   .burger {
     z-index: 1000;
@@ -220,38 +200,10 @@ nav a:hover {
     bottom: 0;
   }
   section {
-    padding: 0;
-  }
-  .card__preview {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
   }
-  .card__preview > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-  .card__filter {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-  }
-  .card__filter:hover {
-    opacity: 0.5;
-  }
-  .card__btns {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  .projects__container {
+    padding-top: 0;
   }
   .skills {
     padding-top: 5vh;

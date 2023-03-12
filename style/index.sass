@@ -1,5 +1,4 @@
 @import "burger"
-
 *
   margin: 0
   padding: 0
@@ -7,14 +6,19 @@
 html, body
   font-family: sans-serif
   box-sizing: border-box
-  color: white
 
-section
+.section
   padding: 5vw
-  & h1
+  &__title
     font-size: 5vh
-    color: darkorange
+    margin: 5vh
+    color: var(--sectionTitle)
     text-align: center
+  &__content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
 
 header
   z-index: 100
@@ -25,9 +29,9 @@ header
   display: flex
   justify-content: space-between
   align-items: center
-  background-color: #161616
+  background-color: var(--headerBg)
   box-shadow: 0 8px 15px -3px rgba(0,0,0,0.5)
-  transition: top 0.3s ease
+  transition: top 0.2s ease
 
 .hidden
   visibility: hidden
@@ -36,10 +40,10 @@ header
   padding: 10px 20px
   min-width: fit-content
   text-align: center
-  background-color: darkorange
-  border-radius: 0 20px 20px 0
+  background-color: var(--logoBg)
+  color: var(--logoText)
 
-nav
+.navigation
   display: flex
   flex: 2
   justify-content: space-between
@@ -49,21 +53,17 @@ nav
     line-height: 75px
     flex: 1
     text-align: center
-    color: white
+    color: var(--headerText)
     &:hover
-      background-color: #111
+      background-color: var(--headerBgHover)
       text-decoration: none
 
 .projects
-  background-color: #404040
+  background-color: var(--sectionBg)
   &__container
-    display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    overflow: hidden
 .card
   margin: 50px
-  min-width: 500px
+  min-width: 400px
   height: 80vh
   border-radius: 8px
   overflow: hidden
@@ -82,7 +82,7 @@ nav
   &__filter
     width: 100%
     height: 100%
-    background-color: #000
+    background-color: var(--black)
     opacity: 0
     transition: opacity 0.5s ease-out
     &:hover
@@ -97,16 +97,8 @@ nav
     align-items: center
 
 .skills
-  background-color: #161616
-  &__title
-    color: darkorange
-    text-align: center
+  background-color: var(--sectionBgSecond)
   &__icons
-    height: auto
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    align-items: center
     & svg
       width: 100px
       margin: 30px
@@ -117,16 +109,8 @@ nav
       width: 30px
 
 .socials
-  background-color: #fff
-  &__title
-    color: darkorange
-    text-align: center
+  background-color: var(--sectionBg)
   &__icons
-    margin: 50px
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-wrap: wrap
     & a
       margin: 10px
       transition: transform 0.1s ease-out
@@ -135,5 +119,9 @@ nav
     & svg
       width: 100px
       height: 100px
+#github
+  fill: var(--sectionTitle)
 
 @import "adaptive"
+@import "themes"
+@import "cssVars.css"

@@ -1,6 +1,6 @@
 let header = document.querySelector(".header");
-let headerHeight = window.getComputedStyle(header).getPropertyValue('height');
-let prevScrollPos = window.pageYOffset;
+let headerHeight = parseInt(window.getComputedStyle(header).getPropertyValue('height'));
+let offset = window.pageYOffset;
 
 function usingMobile() {
     const mediaQuery = window.matchMedia('(max-width: 1000px)')
@@ -10,8 +10,6 @@ function usingMobile() {
 function morphBurger() {
     let bars = document.querySelector('.burger__bars').children;
     bars[1].classList.toggle('decreaseWidth');
-    bars[0].classList.toggle('decreaseWidth');
-    bars[2].classList.toggle('decreaseWidth');
     bars[0].classList.toggle('rotateFirst');
     bars[2].classList.toggle('rotateThird');
 
@@ -25,20 +23,24 @@ function burgerHandler() {
 function initHidingHeader() {
     if (usingMobile()) {
         header.classList.toggle('hidden')
-    } else {
-        window.onscroll = hideNavBarOnScroll;
     }
+    else window.onscroll = hideHeaderOnScroll;
 }
 
-function hideNavBarOnScroll() {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
+function hideHeaderOnScroll() {
+    if (window.pageYOffset >= offset) {
+        header.style.top = "-" + headerHeight + "px";
+    } else {
         header.style.top = "0";
-    } else {
-        header.style.top = "-" + headerHeight;
     }
-    prevScrollPos = currentScrollPos;
-}
+    offset = window.pageYOffset
 
+    if (window.pageYOffset < headerHeight) {
+        header.style.top = "-" + offset + "px";
+        console.log(offset)
+        console.log(window.pageYOffset)
+        return;
+    }
+}
 
 initHidingHeader();
