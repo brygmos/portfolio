@@ -11,6 +11,10 @@ html, body
 
 section
   padding: 5vw
+  & h1
+    font-size: 5vh
+    color: darkorange
+    text-align: center
 
 header
   z-index: 100
@@ -51,12 +55,12 @@ nav
       text-decoration: none
 
 .projects
-  display: flex
-  justify-content: space-around
-  flex-wrap: wrap
-  overflow: hidden
   background-color: #404040
-
+  &__container
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    overflow: hidden
 .card
   margin: 50px
   min-width: 500px
