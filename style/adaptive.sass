@@ -1,0 +1,57 @@
+@media (max-width: 1000px)
+  .logo__container
+    display: none
+
+@media (min-width: 320px) and (max-width: 600px)
+  .navigation
+    flex-direction: column
+    justify-content: space-between
+    & a
+      font-size: 5vh
+      margin: 1vh
+  header
+    height: 100vh
+    align-items: flex-end
+  .burger
+    z-index: 1000
+    display: block
+    position: fixed
+    left: 0
+    bottom: 0
+  section
+    width: 100%
+    .section__content
+  .projects__container
+    padding-top: 0
+  .skills
+    padding-top: 5vh
+    &__icons
+      height: auto
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      & svg
+        width: 30%
+        margin: 30px
+        transition: transform 0.1s ease-out
+        &:hover
+          transform: scale(1.08)
+      & img
+        width: 30px
+  .socials
+    padding-top: 5vh
+    &__icons
+      margin: 50px auto
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+      & a
+        margin: 10px
+        transition: transform 0.1s ease-out
+        &:hover
+          transform: scale(1.08)
+      & svg
+        width: 100px
+        height: 100px

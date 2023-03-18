@@ -1,0 +1,31 @@
+:root {
+--black: #000000;
+--white: #ffffff;
+--cool: #404040;
+--logoBg: #404040;
+--logoText: #ffffff;
+--headerBg: #f8ad86;
+--headerBgHover: #fc935b;
+--headerText: #161616;
+--headerTextHover: #111111;
+--sectionBg: #e3e3e3;
+--sectionBgSecond: #cccccc;
+--sectionTitle: #404040;
+--yellowTest: #ff0;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --black: #000000;
+        --white: #ffffff;
+        --cool: #404040;
+        --logoBg: darkorange;
+        --logoText: #ffffff;
+        --headerBg: #090909;
+        --headerBgHover: #050505;
+        --headerText: #fff;
+        --headerTextHover: #161616;
+        --sectionBg: #161616;
+        --sectionBgSecond: #090909;
+        --sectionTitle: #fff;}
+}

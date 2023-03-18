@@ -1,0 +1,20 @@
+.decreaseWidth
+  transform: scaleX(0)
+
+.rotateFirst
+  transform: translateY(5vw) rotate(45deg)
+
+.rotateThird
+  transform: translateY(-5vw) rotate(-45deg)
+
+.burger
+  display: none
+  padding: 5vw
+  &__bar
+    transition: 0.2s ease-out
+    width: 15vw
+    height: 2vw
+    background-color: #fff
+    outline: 0.01vw solid grey
+    &:nth-child(2n)
+      margin: 3vw auto
