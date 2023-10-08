@@ -1,14 +1,17 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import CursorGlow from '../components/CursorGlow/index'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className={`flex min-h-screen justify-between px-24 gap-4 ${inter.className}`} style={{ background: 'radial-gradient(600px at 1065px 137px, rgba(29, 78, 216, 0.15), transparent 80%)' }}>
-      <div className="w-2/4 bg-gray-800 bg-opacity-20">
-        <aside className="sticky top-0 py-24 flex flex-col justify-between h-screen">
-          <div className="bg-gray-600 bg-opacity-20">
+    <div className={`lg:flex min-h-screen lg:justify-between lg:px-24 xl:px-48 2xl:px-72 px-4 gap-4 ${inter.className}`} style={{ background: 'radial-gradient(600px at 1065px 137px, rgba(29, 78, 216, 0.15), transparent 80%)' }}>
+      <CursorGlow/>
+      <div className="lg:w-2/4 ">
+        <aside className="sticky top-0 lg:py-24 py-4 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+          <div className="mb-8">
             <h1 className='text-4xl font-bold text-slate-200 tracking-widest'>Russkikh Daniil</h1>
             <h2 className='mt-2 text-lg font-medium text-slate-200 tracking-widest'>Front-end developer</h2>
             <p className='mt-4 max-w-xs leading-normal text-slate-400'>I build accessible, inclusive products and digital experiences for the web.</p>
@@ -52,7 +55,7 @@ export default function Home() {
               </ul>
             </nav>
           </div>
-          <section id="socials" className="bg-gray-600 bg-opacity-20">
+          <section id="socials" className="mb-8">
           <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>Socials</h2>
           <div>
             <ul className='flex gap-4'>
@@ -69,7 +72,7 @@ export default function Home() {
               <li>
                 <a href="https://web.telegram.org/k/#@Brygmos" target='blank' className='hover:text-slate-200 inline-block'>
                   <svg width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="h-6 w-6">
-                  <title>Codewars</title>
+                  <title>Telegram</title>
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
                   </svg>
                 </a>
@@ -84,11 +87,11 @@ export default function Home() {
         </section>
         </aside>
       </div>
-      <main className="w-2/4 bg-gray-800 bg-opacity-20 py-24">
-        <section id="about" className="bg-gray-600 bg-opacity-20 mb-24">
-          <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>About me</h2>
+      <main className="lg:w-2/4 lg:py-24">
+        <section id="about" className="lg:mb-24 mb-8">
+          <h2 className='sticky py-4 top-0 text-4xl font-bold text-slate-200 bg-slate-900/75 backdrop-blur tracking-widest mb-4 md:relative md:bg-slate-900/0 md:py-0 lg:relative lg:bg-slate-900/0 lg:py-0'>About</h2>
           <p className='mb-4'>
-            Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint sunt necessitatibus iusto culpa quibusdam exercitationem temporibus rerum recusandae reiciendis vel veritatis nostrum, quasi eveniet voluptatem provident quos quas aspernatur doloremque. Nulla, suscipit incidunt eius assumenda enim laboriosam saepe, cum repellendus aut ipsam doloremque numquam, iusto quas qui. Magnam, minima in.
           </p>
           <p className='mb-4'>
             My main focus these days is building products and leading projects for our clients at Upstatement. In my free time I`ve also released an online video course that covers everything you need to know to build a web app with the Spotify API.
@@ -97,10 +100,12 @@ export default function Home() {
             When I`m not at the computer, I`m usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds.
           </p>
         </section>
-        <section id="skills" className="bg-gray-600 bg-opacity-20 mb-24">
-        <h2 className='text-4xl font-bold text-slate-200 tracking-widest'>Skills</h2>
-        <div className='flex flex-wrap justify-around max-w-lg'>
-          <div className='flex flex-col mt-4 mx-4'>
+        <section id="skills" className="lg:mb-24 mb-8 m-auto">
+        {/* <h2 className='text-4xl font-bold text-slate-200 tracking-widest'>Skills</h2> */}
+        <h2 className='sticky py-4 top-0 text-4xl font-bold text-slate-200 bg-slate-900/75 backdrop-blur tracking-widest mb-4 md:relative md:bg-slate-900/0 md:py-0 lg:relative lg:bg-slate-900/0 lg:py-0'>Skills</h2>
+
+        <div className='lg:flex md:flex sm:flex flex-wrap justify-center block m-auto lg:text-left md:text-left sm:text-left'>
+          <div className='flex flex-col mt-4 mx-4 text-left'>
             <h3 className='uppercase text-slate-300 font-bold text-slate-200 tracking-widest mb-2'>Languages</h3>
             <ul>
                 <li>Javascript</li>
@@ -135,19 +140,24 @@ export default function Home() {
           </div>
         </div>
         </section>
-        <section id="experience" className="bg-gray-600 bg-opacity-20 mb-24">
-        <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>Experience</h2>
+        <section id="experience" className="mb-24">
+        {/* <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>Experience</h2> */}
+        <h2 className='sticky py-4 top-0 text-4xl font-bold text-slate-200 bg-slate-900/75 backdrop-blur tracking-widest mb-4 md:relative md:bg-slate-900/0 md:py-0 lg:relative lg:bg-slate-900/0 lg:py-0'>Experience</h2>
+
         <div className='mb-24'>
-          <a href="/cv.pdf" target='blank' className='group text-slate-200'>
-            <span className='font-bold border-b border-transparent pb-px transition group-hover:border-teal-300'>View CV in PDF</span>
+          <a href="https://myresume.ru/resume/doDruHPDqry/" target='blank' className='group text-slate-200'>
+            <span className='font-bold border-b border-transparent pb-px transition group-hover:border-teal-300'>View CV</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg>
           </a>
         </div>
         </section>
-        <section id="projects" className="bg-gray-600 bg-opacity-20 mb-24">
-        <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>Projects</h2>
+        <section id="projects" className="mb-24">
+        {/* <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>Projects</h2> */}
+        <h2 className='sticky py-4 top-0 text-4xl font-bold text-slate-200 bg-slate-900/75 backdrop-blur tracking-widest mb-4 md:relative md:bg-slate-900/0 md:py-0 lg:relative lg:bg-slate-900/0 lg:py-0'>Projects</h2>
+
+
           <section className='hover:bg-gray-800 transition-all rounded-lg flex flex-col items-start p-8 cursor-pointer group'>
-            <a href="/aboutfs" target='blank' className='mb-4 group text-slate-200'>
+            <a href="https://github.com/brygmos/RollingScopes" target='blank' className='mb-4 group text-slate-200'>
               <span className='font-bold border-b border-transparent pb-px transition group-hover:text-teal-300'>RollingScopes</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-1 -rotate-45 group-hover:text-teal-300 inline-block h-4 w-4 -translate-y-px transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg>
           </a>
@@ -173,11 +183,37 @@ export default function Home() {
             </div>
           </section>
           <section className='group hover:bg-gray-800 transition-all rounded-lg flex flex-col items-start p-8 cursor-pointer'>
-            <a href="/aboutfs" target='blank' className='mb-4 group text-slate-200'>
+            <a href="https://github.com/brygmos/graphiql-app" target='blank' className='mb-4 group text-slate-200'>
+              <span className='font-bold border-b border-transparent pb-px transition group-hover:text-teal-300'>GraphiQL</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-1 -rotate-45 group-hover:text-teal-300 inline-block h-4 w-4 -translate-y-px transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg>
+          </a>
+          <p className='text-sm mb-2'>Playground app for testing queries to server using GraphQL</p>
+            <div className='w-auto'>
+              <Image
+                src="/images/projects/graphiQL/desktop.png"
+                alt="rollingScopes/desktop"
+                width={1000}
+                height={5}
+              />
+            </div>
+            <div className='tags mt-2 flex justify-start'>
+              <ul className='flex flex-wrap'>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>React</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>Redux</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>GraphQL</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>Firebase</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>MaterialUI</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>i18n</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>CodeMirror</li>
+              </ul>
+            </div>
+          </section>
+          <section className='group hover:bg-gray-800 transition-all rounded-lg flex flex-col items-start p-8 cursor-pointer'>
+            <a href="https://github.com/brygmos/ulbiAnvanced" target='blank' className='mb-4 group text-slate-200'>
               <span className='font-bold border-b border-transparent pb-px transition group-hover:text-teal-300'>UlbiAdvanced</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-1 -rotate-45 group-hover:text-teal-300 inline-block h-4 w-4 -translate-y-px transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg>
           </a>
-          <p className='text-sm mb-2'>&quot;End-to-end&quot; frontend project. Implemented during tutorial course by Ulbi (youtube blogger)</p>
+          <p className='text-sm mb-2'>Implemented during tutorial course by Ulbi (youtube blogger)</p>
             <div className='w-auto'>
               <Image
                 src="/images/projects/ulbiAdvanced/desktop.png"
