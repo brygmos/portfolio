@@ -11,16 +11,16 @@ const CursorGlow = () => {
   })
   
   const handleScroll = () => {
-    const cursor: HTMLDivElement = document.querySelector('.cursor-glow');
-    cursor.style.top = `${parseInt(cursor.style.top) + (window.scrollY - diff)}px`
+    const cursor: HTMLDivElement | null = document.querySelector('.cursor-glow');
+    cursor ? cursor.style.top = `${parseInt(cursor.style.top) + (window.scrollY - diff)}px` : null
     diff = window.scrollY
 
   };
 
   const handleMouseMove = (e: MouseEvent) => {
-    const cursor: HTMLDivElement = document.querySelector('.cursor-glow');
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY + window.scrollY}px`;
+    const cursor: HTMLDivElement | null = document.querySelector('.cursor-glow');
+    cursor ? cursor.style.left = `${e.clientX}px`: null
+    cursor ? cursor.style.top = `${e.clientY + window.scrollY}px` : null
   };
 
   useEffect(() => {
