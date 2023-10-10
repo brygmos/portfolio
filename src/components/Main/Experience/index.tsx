@@ -1,7 +1,6 @@
 export function Experience () {
     return (
       <section id="experience" className="mb-24">
-        {/* <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>Experience</h2> */}
         <h2 className='sticky py-4 top-0 text-4xl font-bold text-slate-200 bg-slate-900/75 backdrop-blur tracking-widest mb-4 md:relative md:bg-slate-900/0 md:py-0 lg:relative lg:bg-slate-900/0 lg:py-0'>Experience</h2>
 
         <div className='mb-24'>

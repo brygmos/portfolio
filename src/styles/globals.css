@@ -29,7 +29,3 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-.active a span{
-  color: green
-}

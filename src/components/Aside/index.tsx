@@ -9,7 +9,6 @@ export function Aside () {
             <h2 className='mt-2 text-lg font-medium text-slate-200 tracking-widest'>Front-end developer</h2>
             <p className='mt-4 max-w-xs leading-normal text-slate-400'>I build accessible, inclusive products and digital experiences for the web.</p>
             <Navigation/>
-            
           </div>
           <section id="socials" className="mb-8">
           <h2 className='text-4xl font-bold text-slate-200 tracking-widest mb-4'>Socials</h2>
