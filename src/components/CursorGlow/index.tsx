@@ -1,29 +1,14 @@
-'use client';
-
 import React, { useEffect } from 'react';
 
 const CursorGlow = () => {
 
-  let diff: number;
-
-  useEffect(()=>{
-    diff = window.scrollY || 0
-  })
-  
-  const handleScroll = () => {
-    const cursor: HTMLDivElement | null = document.querySelector('.cursor-glow');
-    cursor ? cursor.style.top = `${parseInt(cursor.style.top) + (window.scrollY - diff)}px` : null
-    diff = window.scrollY
-
-  };
-
-  const handleMouseMove = (e: MouseEvent) => {
-    const cursor: HTMLDivElement | null = document.querySelector('.cursor-glow');
-    cursor ? cursor.style.left = `${e.clientX}px`: null
-    cursor ? cursor.style.top = `${e.clientY + window.scrollY}px` : null
-  };
-
   useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const cursor: HTMLDivElement | null = document.querySelector('.cursor-glow');
+      cursor ? cursor.style.left = `${e.clientX}px`: null
+      cursor ? cursor.style.top = `${e.clientY + window.scrollY}px` : null
+    };
+
     document.addEventListener('mousemove', handleMouseMove);
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
@@ -31,6 +16,13 @@ const CursorGlow = () => {
   }, []);
 
   useEffect(() => {
+    let diff = window.scrollY
+
+    const handleScroll = () => {
+      const cursor: HTMLDivElement | null = document.querySelector('.cursor-glow');
+      cursor ? cursor.style.top = `${parseInt(cursor.style.top) + (window.scrollY - diff)}px` : null
+    };
+
     document.addEventListener('scroll', handleScroll);
     return () => {
       document.removeEventListener('scroll', handleScroll);

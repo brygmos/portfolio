@@ -5,12 +5,11 @@ export function Navigation () {
   useEffect(()=>{
     const nav = document.querySelector('.nav')
     const sections = document.querySelectorAll<HTMLElement>('main > section');
-    const navItems = nav?.querySelectorAll(`[href]`);
 
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
-      threshold: [0.5],
+      rootMargin: '0px 0px -70% 0px',
+      threshold: [0.2],
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -19,16 +18,13 @@ export function Navigation () {
         const entrySection = entry.target as HTMLElement
         const entrySectionName = entrySection.id
         const navItem = nav?.querySelector<HTMLElement>(`[href="#${entrySectionName}"]`);
-        
-        if (entry.isIntersecting) {
 
-          navItems?.forEach(navItem => {
-            navItem.classList.remove('active')
-          })
+        if (entry.isIntersecting) {
 
           navItem?.classList.add('active')
 
         } else {
+
           navItem?.classList.remove('active');
         }
       });
