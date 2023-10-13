@@ -9,7 +9,7 @@ export function Navigation () {
     const observerOptions = {
       root: null,
       rootMargin: '0px 0px -70% 0px',
-      threshold: [0.2],
+      threshold: [0.1],
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
