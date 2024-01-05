@@ -30,6 +30,29 @@ export function Projects () {
               </ul>
             </div>
           </a>
+          <a href="https://github.com/brygmos/severstal-notes" target='blank' className='hover:bg-gray-800 transition-all rounded-lg flex flex-col items-start p-8 cursor-pointer group'>
+            <span className='mb-4 group text-slate-200'>
+              <span className='font-bold border-b border-transparent pb-px transition group-hover:text-teal-300'>Notes App</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-1 -rotate-45 group-hover:text-teal-300 inline-block h-4 w-4 -translate-y-px transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1" aria-hidden="true"><path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path></svg>
+            </span>
+            <span className='text-sm mb-2'>The project was implemented as a test tast for company</span>
+            <div className='w-auto'>
+              <Image
+                src="/images/projects/severstalNotes/desktop.png"
+                alt="severstalNotes/desktop"
+                width={1000}
+                height={5}
+              />
+            </div>
+            <div className='tags mt-2 flex justify-start'>
+              <ul className='flex flex-wrap'>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>React</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>Redux</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>Vite</li>
+                <li className='mt-2 mr-2 flex items-center text-xs px-3 py-1 bg-cyan-950 text-teal-300 rounded-full'>Vitest</li>
+              </ul>
+            </div>
+          </a>
           <a href="https://github.com/brygmos/graphiql-app" target='blank' className='group hover:bg-gray-800 transition-all rounded-lg flex flex-col items-start p-8 cursor-pointer'>
             <p className='mb-4 group text-slate-200'>
               <span className='font-bold border-b border-transparent pb-px transition group-hover:text-teal-300'>GraphiQL</span>
